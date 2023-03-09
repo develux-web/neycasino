@@ -43,4 +43,5 @@ header .wrapper {
     line-height: 22px;
     color: #1D1D1F;
     text-decoration: none;
+    text-transform: uppercase;
 }

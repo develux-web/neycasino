@@ -1,9 +1,6 @@
 const acc = document.querySelectorAll(".accordion");
 let i;
 
-console.log(acc)
-console.log('text')
-
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function(e) {
         if(!e.target.classList.contains('active')) {

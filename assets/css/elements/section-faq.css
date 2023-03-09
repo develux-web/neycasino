@@ -46,10 +46,20 @@
 }
 .accordion:after {
      content: "";
-     width: 70px;
-     position: absolute;
-     bottom: 0;
-     left: 0;
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #FFFFFF;
+    border-left: 3px solid #FFFFFF;
+    transform: translate(0, -50%) rotate(-135deg);
+    transition: all 0.2s ease-out;
+
+ }
+.accordion.active:after {
+    transform: translate(0, -50%) rotate(-225deg);
  }
 .panel {
     max-height: 0;
@@ -57,8 +67,10 @@
     transition: max-height 0.2s ease-out;
 }
 .list_recent {
-    margin-top: 0;
     margin-bottom: 30px;
-    max-height: 425px;
     overflow: hidden;
+    padding: 15px 0 0 20px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #fff;
 }

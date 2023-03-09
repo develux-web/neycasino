@@ -15,7 +15,7 @@ class ThemeConfiguration
     public function includeJS(): void
     {
         if (is_front_page()) {
-            wp_enqueue_script('accordion', get_template_directory_uri() . '/assets/js/accordion.js', '', '', true);
+            wp_enqueue_script('accordion-faq', get_template_directory_uri() . '/assets/js/accordion.js', '', '', true);
         }
     }
     public function includeCSS(): void
