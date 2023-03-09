@@ -26,8 +26,37 @@ footer .menu_footer ul li {
 }
 footer .menu_footer ul li a {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 0.9em;
     line-height: 40px;
     color: #000000;
     text-decoration: none;
+}
+@media screen and (max-width: 1023px) {
+    footer .footer_middle .col8 {
+        width: calc(100% - 30px);
+    }
+    footer .top_footer {
+        padding: 60px 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    footer .col8 {
+        width: calc(100% - 30px);
+    }
+    footer .top_footer {
+        padding: 40px 0;
+    }
+    footer .top_footer .col6 {
+        width: calc(100% - 30px);
+    }
+    footer .menu_footer {
+        flex-wrap: wrap;
+    }
+    footer .menu_footer .item:first-child {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    footer .footer_middle {
+        margin: 45px 0;
+    }
 }

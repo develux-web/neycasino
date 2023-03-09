@@ -10,21 +10,21 @@
 }
 .section_seotext .block_seotext h1 {
     font-weight: 600;
-    font-size: 30px;
-    line-height: 18px;
+    font-size: 1.5em;
+    line-height: 1;
     color: #77B038;
     margin: 0;
 }
 .section_seotext .block_seotext h2 {
     font-weight: 600;
-    font-size: 30px;
-    line-height: 18px;
+    font-size: 1.5em;
+    line-height: 1;
     color: #77B038;
     margin: 0;
 }
 .section_seotext .block_seotext p {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 1.1em;
     line-height: 30px;
     color: #4E4E4E;
     margin: 0;
@@ -34,4 +34,12 @@
     height: auto;
     margin: 0;
     border-radius: 20px;
+}
+@media screen and (max-width: 767px) {
+    .section_seotext .block_seotext {
+        gap: 20px;
+    }
+    .section_seotext .block_seotext h2 {
+        line-height: 1.3;
+    }
 }

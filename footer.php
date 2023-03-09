@@ -55,5 +55,20 @@
 
 <?php wp_footer(); ?>
 
+<script>
+    function onMenuToggle(_this,targetClass){
+        _this.classList.toggle('active');
+        document.querySelector(targetClass).classList.toggle('active');
+
+        document.addEventListener('click', (event) => {
+            let isDropActive = _this.classList.contains('active');
+            let its_menu = event.target == document.querySelector(targetClass) || document.querySelector(targetClass).contains(event.target);
+            if(!isDropActive && !its_menu){
+                _this.classList.remove('active');
+                document.querySelector(targetClass).classList.remove('active');
+            }
+        })
+    }
+</script>
 </body>
 </html>

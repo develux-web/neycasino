@@ -93,3 +93,19 @@ section {
     align-items: normal;
 }
 
+@media screen and (max-width: 1023px) {
+    body {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    section {
+        margin-top: 20px;
+    }
+}

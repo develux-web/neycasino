@@ -39,6 +39,10 @@
                         <li><a href="#">Casino bonus</a></li>
                     </ul>
                 </div>
+                <div class="hamburger" onclick="onMenuToggle(this,'.menu')">
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>

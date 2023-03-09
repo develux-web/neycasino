@@ -3,7 +3,7 @@
 }
 .block_casino .name {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 1.5em;
     line-height: 22px;
     color: #7ECD26;
     margin-bottom: 56px;
@@ -25,6 +25,12 @@
     width: 100%;
     height: 208px;
 }
+.block_casino .list_casino .item .right_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
 .block_casino .list_casino .image_logo {
     max-width: 208px;
     width: 100%;
@@ -45,7 +51,7 @@
 }
 .block_casino .list_casino .rating .text {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.5em;
     line-height: 22px;
     color: #C4C4C4;
 }
@@ -75,14 +81,14 @@
 }
 .block_casino .list_casino .middle_content .offers_casino .title {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.5em;
     line-height: 22px;
     color: #7ECD26;
     margin-bottom: 10px;
 }
 .block_casino .list_casino .middle_content .offers_casino .description {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1em;
     line-height: 22px;
     color: #000000;
 }
@@ -112,7 +118,7 @@
     align-items: center;
     gap: 7px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 0.8em;
     line-height: 22px;
     color: #000000;
 }
@@ -121,7 +127,7 @@
     box-shadow: 0px 3.63451px 3.63451px rgba(0, 0, 0, 0.25);
     border-radius: 13.6294px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 0.9em;
     line-height: 22px;
     display: flex;
     align-items: center;
@@ -133,4 +139,83 @@
     text-decoration: none;
 }
 
-
+@media screen and (max-width: 1023px) {
+    .block_casino .list_casino .buttons a.btn {
+        padding: 20px 0;
+    }
+    .block_casino .list_casino .middle_content .offers_casino .title {
+        font-size: 0.8em;
+        line-height: 19px;
+    }
+    .block_casino .list_casino .rating .text {
+        font-size: 0.8em;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .block_casino .list_casino .item .right_item {
+        width: 70%;
+        flex-direction: column;
+    }
+    .block_casino .list_casino .image_logo {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .block_casino .list_casino .middle_content .offers_casino .title {
+        display: none;
+    }
+    .block_casino .list_casino .middle_content .name_casino {
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    .block_casino .list_casino .middle_content {
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .block_casino .list_casino .buttons ul {
+        gap: 0;
+        background: #effbf5;
+        padding: 10px 10px 15px 10px;
+        border-radius: 0 0 8px 8px;
+        width: 100%;
+    }
+    .block_casino .list_casino .rating .text {
+        display: none;
+    }
+    .block_casino .list_casino .item {
+        align-items: stretch;
+        box-shadow: 0px 1px 8px rgb(0 0 0 / 25%);
+        height: 320px;
+    }
+    .block_casino .list_casino .buttons {
+        padding: 0 10px 10px 10px;
+        gap: 10px;
+        max-width: none;
+    }
+    .block_casino .list_casino .middle_content .offers_casino {
+        padding: 0 10px;
+        width: 100%;
+    }
+    .block_casino .list_casino .middle_content .offers_casino .description {
+        background: #effbf5;
+        padding: 10px 10px 0px 10px;
+        border-radius: 8px 8px 0 0;
+    }
+    .block_casino .list_casino .rating {
+        gap: 0;
+    }
+    .block_casino .list_casino .buttons a.btn {
+        box-shadow: 0px 1.63451px 2.63451px rgb(0 0 0 / 25%);
+        padding: 15px 0;
+    }
+    .block_casino .list_casino {
+        gap: 30px;
+    }
+}

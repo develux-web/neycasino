@@ -10,15 +10,31 @@
 }
 .block_about h1.name {
     font-weight: 800;
-    font-size: 42px;
+    font-size: 2.1em;
     line-height: 34px;
     color: #7ECD26;
 }
 .block_about .description {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1em;
     line-height: 34px;
     color: #000000;
     width: 100%;
     max-width: 754px;
+}
+@media screen and (max-width: 1023px) {
+    .block_about {
+        padding: 40px 50px;
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .block_about {
+        padding: 20px 30px;
+        gap: 10px;
+        margin-top: 80px;
+    }
+    .block_about .description {
+        line-height: 27px;
+    }
 }
