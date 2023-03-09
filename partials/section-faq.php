@@ -2,50 +2,33 @@
     <div class="container">
         <div class="wrapper">
             <div class="col5">
-                <div class="name_faq">Vanliga frågor och svar</div>
+                <div class="name_faq"><?php echo $args['title']; ?></div>
                 <div class="desc_faq">
-                    Här hittar du de vanligaste frågorna och svaren gällande nya nätcasinon.
+                    <?php echo $args['text']; ?>
                 </div>
                 <div class="image_faq">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/qa.png" alt="">
+                    <img src="<?php echo $args['image']; ?>" alt="<?php echo $args['title']; ?>" loading="lazy">
                 </div>
             </div>
             <div class="col7">
                 <div class="wrapper_accordion">
-
-                    <div class="accordion_item">
-                        <button class="accordion">Måste man välja nya casinon?</button>
-                        <div class="panel">
-                            <div class="list_recent">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet beatae delectus distinctio ducimus ea error, fugiat impedit itaque labore, laborum molestiae numquam praesentium quos saepe sapiente velit voluptas voluptate.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion_item">
-                        <button class="accordion">Vilka fördelar finns det med att spela på nya casinon?</button>
-                        <div class="panel">
-                            <div class="list_recent">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet beatae delectus distinctio ducimus ea error, fugiat impedit itaque labore, laborum molestiae numquam praesentium quos saepe sapiente velit voluptas voluptate.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion_item">
-                        <button class="accordion">Vilka nya svenska casinon rekommenderar ni?</button>
-                        <div class="panel">
-                            <div class="list_recent">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet beatae delectus distinctio ducimus ea error, fugiat impedit itaque labore, laborum molestiae numquam praesentium quos saepe sapiente velit voluptas voluptate.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion_item">
-                        <button class="accordion">Är nya casinon säkra?</button>
-                        <div class="panel">
-                            <div class="list_recent">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet beatae delectus distinctio ducimus ea error, fugiat impedit itaque labore, laborum molestiae numquam praesentium quos saepe sapiente velit voluptas voluptate.
-                            </div>
-                        </div>
-                    </div>
-
+                    <?php
+                    $featured_faq = $args['faq'];
+                    if( $featured_faq ): ?>
+                            <?php foreach( $featured_faq as $faq ):
+                                $title = get_the_title( $faq->ID );
+                                $answer = get_field( 'answer', $faq->ID );
+                                ?>
+                                <div class="accordion_item">
+                                    <button class="accordion"><?php echo $title; ?></button>
+                                    <div class="panel">
+                                        <div class="list_recent">
+                                            <?php echo $answer; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

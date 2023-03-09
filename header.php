@@ -32,12 +32,19 @@
             </div>
             <div class="col8">
                 <div class="menu">
-                    <ul>
-                        <li><a href="#">Casino på nett</a></li>
-                        <li><a href="#">Freespins</a></li>
-                        <li><a href="#">Nettcasino</a></li>
-                        <li><a href="#">Casino bonus</a></li>
-                    </ul>
+                    <?php
+                    wp_nav_menu( [
+                        'menu'            => '',
+                        'container'       => false,
+                        'container_class' => '',
+                        'container_id'    => '',
+                        'menu_class'      => 'menu',
+                        'echo'            => true,
+                        'fallback_cb'     => 'wp_page_menu',
+                        'items_wrap'      => '<ul>%3$s</ul>',
+                        'depth'           => 0,
+                    ] );
+                    ?>
                 </div>
                 <div class="hamburger" onclick="onMenuToggle(this,'.menu')">
                     <span></span>
