@@ -17,11 +17,12 @@
                                 $offer = get_field( 'offers', $casino->ID );
                                 $bonus = get_field( 'bonus', $casino->ID );
                                 $link = get_field( 'link_casino', $casino->ID );
+                                $image_url = wp_get_attachment_url(get_post_thumbnail_id($casino->ID), 'full');
                                 ?>
 
                                 <div class="item">
                                     <div class="image_logo" style="background: <?php echo $color;?>;">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/expekt.png" alt="">
+                                        <img src="<?php echo $image_url; ?>" alt="">
                                     </div>
                                     <div class="right_item">
                                         <div class="middle_content">
