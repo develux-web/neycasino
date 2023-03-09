@@ -14,15 +14,14 @@ class ThemeConfiguration
 
     public function includeJS(): void
     {
-
+        if (is_front_page()) {
+            wp_enqueue_script('accordion', get_template_directory_uri() . '/assets/js/accordion.js', '', '', true);
+        }
     }
     public function includeCSS(): void
     {
         if (is_front_page()) {
             wp_enqueue_style('home-css', get_template_directory_uri() . '/assets/css/pages/home.css');
-        }
-        if (is_page('contact-us')) {
-            wp_enqueue_style('contact-us-css', get_template_directory_uri() . '/assets/css/pages/contact-us.css');
         }
     }
     public function themeSupport(): void

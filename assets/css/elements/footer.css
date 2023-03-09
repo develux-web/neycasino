@@ -1,0 +1,33 @@
+footer {
+    margin-top: 40px;
+}
+footer .top_footer {
+    padding: 60px 165px;
+    background: #FBFBFB;
+}
+footer .top_footer .logo_footer{
+    display: flex;
+    align-items: center;
+}
+footer .footer_middle {
+    margin: 68px 0;
+}
+footer .menu_footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+footer .menu_footer ul {
+    margin: 0;
+    padding: 0;
+}
+footer .menu_footer ul li {
+    list-style: none;
+}
+footer .menu_footer ul li a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
+    text-decoration: none;
+}

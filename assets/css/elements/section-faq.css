@@ -1,0 +1,64 @@
+.faq_section {
+    padding: 80px 0;
+    width: 100%;
+    background: #77B038;
+}
+.faq_section .name_faq {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+.faq_section .desc_faq {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    max-width: 390px;
+}
+.faq_section .image_faq {
+    margin-top: 30px;
+}
+.wrapper_accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.accordion_item {
+    width: 100%;
+}
+.accordion {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 28px 0 28px 33px;
+    width: 100%;
+    outline: none;
+    transition: 0.4s;
+    position: relative;
+    border: 2px solid #FFFFFF;
+    border-radius: 12.7245px;
+    font-weight: 600;
+    font-size: 18.6626px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-align: left;
+}
+.accordion:after {
+     content: "";
+     width: 70px;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+ }
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.list_recent {
+    margin-top: 0;
+    margin-bottom: 30px;
+    max-height: 425px;
+    overflow: hidden;
+}
