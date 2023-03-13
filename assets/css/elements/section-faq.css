@@ -1,7 +1,7 @@
 .faq_section {
     padding: 80px 0;
     width: 100%;
-    background: #77B038;
+    background: #76d77e;
 }
 .faq_section .name_faq {
     font-weight: 600;
@@ -95,5 +95,11 @@
     }
     .accordion:after {
         right: 25px;
+    }
+    .faq_section .image_faq {
+        display: none;
+    }
+    .faq_section .desc_faq {
+        margin-bottom: 30px;
     }
 }
